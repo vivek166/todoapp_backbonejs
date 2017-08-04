@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "UTF-8">
+      <meta http-equiv = "X-UA-Compatible" content = "IE = edge,chrome = 1">
+      <title>Backbonejs</title>
+   </head>
+   <body>
+      <div>
+        <h2>TodoApplication</h2>
+      </div>
+      <div class="tasks-list"></div>
+      <table>
+        <tr>
+          <th>
+            Title
+          </th> 
+        </tr>
+        <tr>
+          <td class="blogs-list"></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="task" class="title-input" placeholder="enter task"></td>
+          <td><button class="add-task">Add</button></td>
+        </tr>
+      </table>
+      <script type="text/template" src="tasks-list-template">
+        <td><span class="title"><%= title %></span></td>
+        <td><button class="delete-task">Delete</button></td>
+      </script>
+      <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="../node_modules/underscore/underscore-min.js"></script>
+      <script src="../node_modules/backbone/backbone-min.js"></script>
+      <script src="scripts.js"></script>
+   </body>
+</html>
