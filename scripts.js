@@ -1,4 +1,78 @@
-//todo model
+var Task = Backbone.Model.extend({
+	defaults : {
+		title : 'vivek'
+	}
+});
+
+var TaskView = Backbone.View.extend({
+	el : 'li',
+	initialize : function(){
+		this.render();
+	},
+
+	mytemplate : _.template($('#personalDetails').html()),
+
+	render : function(){
+		//this.$el.html(this.model.get('title'));
+		this.$el.html(this.mytemplate(this.model.toJSON()));
+	}
+});
+
+var Tasks = Backbone.Collection.extend({
+	[]
+});
+
+var TasksView = Backbone.View.extend({model : Tasks});
+
+
+
+var tasks = new Tasks();
+var tasksView = new TasksView({ model: tasks });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*//todo model
 var Task = Backbone.Model.extend({
 	defaults : {
 		title : ''
@@ -6,7 +80,9 @@ var Task = Backbone.Model.extend({
 });
 
 //todo collection
-var Tasks = Backbone.Collection.extend({});
+var Tasks = Backbone.Collection.extend({
+	model : Task
+});
 
  var task1 = new Task({
  	title :'restart mysql server'
@@ -48,9 +124,11 @@ var TasksView = Backbone.View.extend({
 var tasksView = new TasksView();
 $(document).ready(function(){
 	$('.add-task').on('click', function(){
-		var task =new Task();
-		title:$('.title-input').val();
-	});
-	console.log(task.toJSON());
+		var task =new Task({
+			title : $('.title-input').val()
+		})
+	console.log(tasks.toJSON());
 	tasks.add(task);
-});
+	});
+	
+});*/
